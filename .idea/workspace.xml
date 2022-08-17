@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="da625eaa-792c-4788-a4bf-b7e76025fb68" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/BankWebApp_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/BankWebApp_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/DataStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/dao/AccountDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/dao/DaoInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/dao/NewUserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/dao/SavingAccountDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/dao/TransactionDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/database_management/DatabaseManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/database_management/JDBCConnector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/repositories/Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/enums/AccountType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/enums/TransactionType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/SavingAccountDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/SavingPlan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/CompoundInterestCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/InterestCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ChangePassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ChangePassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CurrentAccountTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CurrentAccountTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Logout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/RegisterServlet.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2DTIYZ6qZJx8IlUmORExJz6d9QD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="false" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Project.color": "0fffeb",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/datvo/IdeaProjects/CSE456/BankWebApp/src/main/java/controllers"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/controllers" />
+      <recent name="$PROJECT_DIR$/src/main/java/data" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="data.dao" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.65" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.65" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment>
+        <artifact name="BankWebApp:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/BankWebApp_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="BankWebApp:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="da625eaa-792c-4788-a4bf-b7e76025fb68" name="Changes" comment="" />
+      <created>1660716703441</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660716703441</updated>
+      <workItem from="1660716704484" duration="21959000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
