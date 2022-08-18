@@ -20,7 +20,7 @@ public class Transaction {
     private double prevAmount;
     private double finalAmount;
 
-    public Transaction(String id, String toAccountId, String accountId, TransactionType type, LocalDate conductedAt, double prevAmount, double finalAmount) {
+    public Transaction(String id, String accountId, String toAccountId, TransactionType type, LocalDate conductedAt, double prevAmount, double finalAmount) {
         this.id = id;
         this.accountId = accountId;
         this.toAccountId = toAccountId;

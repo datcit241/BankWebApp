@@ -9,8 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da625eaa-792c-4788-a4bf-b7e76025fb68" name="Changes" comment="Finish">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/homepage.jsp" afterDir="false" />
+    <list default="true" id="da625eaa-792c-4788-a4bf-b7e76025fb68" name="Changes" comment="Add data.sql">
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Transaction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,9 +62,8 @@
     "Project.color": "0fffeb",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/datvo/IdeaProjects/CSE456/BankWebApp/src/main/webapp"
+    "last_opened_file_path": "/home/datvo/IdeaProjects/CSE456/BankWebApp/src/main/resources"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -74,6 +73,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/java/controllers" />
       <recent name="$PROJECT_DIR$/src/main/java/data" />
@@ -149,7 +149,7 @@
       <option name="presentableId" value="Default" />
       <updated>1660716703441</updated>
       <workItem from="1660716704484" duration="22143000" />
-      <workItem from="1660792134942" duration="19919000" />
+      <workItem from="1660792134942" duration="20351000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1660754459921</created>
@@ -172,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660814491319</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add data.sql">
+      <created>1660814941873</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660814941873</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +199,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish" />
+    <MESSAGE value="Add data.sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add data.sql" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
