@@ -1,5 +1,6 @@
 package controllers;
 
+import enums.AccountType;
 import models.User;
 import services.UserService;
 
@@ -30,6 +31,7 @@ public class LoginServlet extends HttpServlet {
 					request.getRequestDispatcher("change_password.jsp").forward(request, response);
 				} else {
 					session.setAttribute("user", user);
+					session.setAttribute("account-type", AccountType.Current.toString());
 					request.getRequestDispatcher("homepage.jsp").forward(request, response);
 				}
 			} catch (Exception e) {

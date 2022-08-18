@@ -59,11 +59,9 @@ public class Transaction {
         return "'" + this.id + "'," +
                 "'" + this.accountId + "'," +
                 "'" + this.toAccountId + "'," +
-                "'" + this.type + "'," +
+                "'" + this.type.toString() + "'," +
                 "'" + this.conductedAt + "'," +
                 this.prevAmount + "," +
-                this.finalAmount + "," +
-                "'" + this.getDescription() + "'"
-                ;
+                this.finalAmount;
     }
 }

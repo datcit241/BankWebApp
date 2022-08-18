@@ -31,6 +31,7 @@ public class SavingAccountDao implements DaoInterface<SavingAccountDetails> {
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            System.out.println(query);
         }
 
         return list;
@@ -38,11 +39,13 @@ public class SavingAccountDao implements DaoInterface<SavingAccountDetails> {
 
     @Override
     public void insert(SavingAccountDetails savingAccountDetails) {
-        String query = "insert into accounts values(" + savingAccountDetails + ")";
+        String query = "insert into saving_accounts values(" + savingAccountDetails + ")";
+        System.out.println(query);
         try {
             databaseManagement.doExecuteUpdate(query);
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            System.out.println(query);
         }
     }
 
@@ -53,13 +56,16 @@ public class SavingAccountDao implements DaoInterface<SavingAccountDetails> {
 
     @Override
     public void update(SavingAccountDetails savingAccountDetails) {
-        String query = "update accounts set" +
+        String query = "update accounts set " +
                 "saved_from = '" + savingAccountDetails.getSavedFrom() + "'," +
-                "saving_plan_id = '" + savingAccountDetails.getSavingPlanId() + "'";
+                "saving_plan_id = '" + savingAccountDetails.getSavingPlanId() + "' " +
+                "where account_id = " + savingAccountDetails.getAccountId();
+        System.out.println(query);
         try {
             databaseManagement.doExecuteUpdate(query);
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            System.out.println(query);
         }
     }
 }

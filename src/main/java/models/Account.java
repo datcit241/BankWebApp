@@ -31,6 +31,6 @@ public class Account {
         return "'" + this.id + "'," +
                 "'" + this.userId + "'," +
                 this.balance + "," +
-                "'" + this.type + "'";
+                "'" + this.type.toString() + "'";
     }
 }

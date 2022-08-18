@@ -36,6 +36,7 @@ public class TransactionDao implements DaoInterface<Transaction> {
                 list.add(transaction);
             }
         } catch (Exception e) {
+            System.out.println(query);
             System.out.println(e.getMessage());
         }
 
@@ -44,10 +45,11 @@ public class TransactionDao implements DaoInterface<Transaction> {
 
     @Override
     public void insert(Transaction transaction) {
-        String query = "insert into accounts values(" + transaction + ")";
+        String query = "insert into transactions values(" + transaction + ")";
         try {
             databaseManagement.doExecuteUpdate(query);
         } catch (Exception e) {
+            System.out.println(query);
             System.out.println(e.getMessage());
         }
     }

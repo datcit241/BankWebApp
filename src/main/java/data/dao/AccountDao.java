@@ -30,6 +30,7 @@ public class AccountDao implements DaoInterface<Account> {
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            System.out.println(query);
         }
 
         return list;
@@ -52,13 +53,15 @@ public class AccountDao implements DaoInterface<Account> {
 
     @Override
     public void update(Account account) {
-        String query = "update accounts set" +
+        String query = "update accounts set " +
                 "balance = " + account.getBalance() + "," +
-                "type = '" + account.getType() + "'";
+                "type = '" + account.getType().toString() + "' " +
+                "where id = '" + account.getId() + "'";
         try {
             databaseManagement.doExecuteUpdate(query);
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            System.out.println(query);
         }
     }
 }

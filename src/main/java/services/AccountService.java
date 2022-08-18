@@ -42,6 +42,12 @@ public class AccountService {
     public boolean createAccount(User user, AccountType accountType) {
         String id = UUID.randomUUID().toString();
         Account account = new Account(id, user.getId(), 0d, accountType);
+
+        if (accountType == AccountType.Saving) {
+            SavingAccountDetails savingAccountDetails = new SavingAccountDetails(id, LocalDate.now(), "-1");
+            new SavingAccountDao().insert(savingAccountDetails);
+        }
+
         new AccountDao().insert(account);
         return true;
     }
@@ -171,6 +177,7 @@ public class AccountService {
 
         renewSavingDateWhenNecessary(fromAccount);
         updateAccount(fromAccount);
+        updateAccount(toAccount);
 
         return true;
     }

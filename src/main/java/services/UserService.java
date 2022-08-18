@@ -22,7 +22,7 @@ public class UserService {
 
     public String createUser() {
         String username;
-        while (getUserWithUsername(username = String.format("%09d", new Random().nextLong(999999999))) != null);
+        while (getUserWithUsername(username = String.format("%09d", new Random().nextLong())) != null);
         String password = UUID.randomUUID().toString();
 
         createUser(username, password);

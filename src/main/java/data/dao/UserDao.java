@@ -28,6 +28,7 @@ public class UserDao implements DaoInterface<User> {
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            System.out.println(query);
         }
 
         return list;
@@ -40,6 +41,7 @@ public class UserDao implements DaoInterface<User> {
             databaseManagement.doExecuteUpdate(query);
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            System.out.println(query);
         }
     }
 
@@ -50,16 +52,18 @@ public class UserDao implements DaoInterface<User> {
 
     @Override
     public void update(User user) {
-        String query = "update users set" +
+        String query = "update users set " +
                 "password = '" + user.getPassword() + "'," +
                 "name = '" + user.getName() + "'," +
                 "address = '" + user.getAddress() + "'," +
-                "phone_number = '" + user.getPhoneNumber() + "'," +
+                "phone_number = '" + user.getPhoneNumber() + "' " +
                 "where id = '" + user.getId() + "'";
+        System.out.println(query);
         try {
             databaseManagement.doExecuteUpdate(query);
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            System.out.println(query);
         }
     }
 

@@ -11,7 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.*;
 
-@WebServlet(value="CurrentAccountTask")
+@WebServlet(value="/CurrentAccountTask")
 public class CurrentAccountTask extends HttpServlet {
 	private AccountService accountService = new AccountService();
 	private static final long serialVersionUID = 1L;
@@ -27,8 +27,13 @@ public class CurrentAccountTask extends HttpServlet {
 
 		TransactionType transactionType = TransactionType.valueOf(request.getParameter("transaction"));
 		double amount = Double.parseDouble(request.getParameter("amount"));
-		AccountType accountType  = AccountType.valueOf(request.getParameter("account-type"));
+		AccountType accountType  = AccountType.valueOf((String) request.getSession().getAttribute("account-type"));
 		Account account = new AccountService().getUserAccount(user, accountType);
+
+		System.out.println(transactionType);
+		System.out.println(amount);
+		System.out.println(accountType);
+		System.out.println(account);
 
 		boolean check = false;
 		double getMoney = 0;
@@ -46,7 +51,7 @@ public class CurrentAccountTask extends HttpServlet {
 			return;
 		}
 
-		request.setAttribute("action", transactionType);
+		request.setAttribute("action", transactionType.toString());
 		request.setAttribute("status", check);
 		request.setAttribute("money", getMoney);
 		request.getRequestDispatcher("status.jsp").forward(request, response);

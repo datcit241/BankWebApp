@@ -11,7 +11,8 @@ public class JDBCConnector {
 
 	public Connection getCon() {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+//			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/banking", "root", "1234");
 		} catch (SQLException ex) {
 			Logger.getLogger(JDBCConnector.class.getName()).log(Level.SEVERE, null, ex);

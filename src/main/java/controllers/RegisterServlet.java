@@ -1,6 +1,7 @@
 package controllers;
 
 import data.dao.UserDao;
+import enums.AccountType;
 import models.User;
 import services.UserService;
 
@@ -23,6 +24,7 @@ public class RegisterServlet extends HttpServlet {
 		String phone = request.getParameter("customer-phone");
 
 		User user = userService.getUserWithUsername(id);
+		request.getSession().setAttribute("account-type", AccountType.Current.toString());
 
 		user.setName(name);
 		user.setAddress(address);

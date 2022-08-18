@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1" errorPage="error.jsp"%>
+<%--<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" errorPage="error.jsp"%>--%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +21,7 @@
 <%
 String status = String.valueOf(request.getAttribute("status"));
 if (status.equals("true")) {
-	status = "SUCCESSFULL";
+	status = "SUCCESSFUL";
 } else {
 	status = "FAILED";
 }

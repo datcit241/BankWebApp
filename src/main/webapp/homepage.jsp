@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1" errorPage="error.jsp"%>
+<%--<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" errorPage="error.jsp"%>--%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ page import="models.*" %>
 <%@ page import="enums.*" %>
 <%@ page import="services.*" %>
@@ -40,12 +40,12 @@
 			</div>
 			<div class="main-form">
 				<div class="card-body">
-					<a href="switch-account-type/?type=Saving">
+					<a href="switch-account-type?type=Saving">
 						<button class="clickable-button btn-action" onclick="doFunction('SavingAccountDisplay')">Saving Account</button>
 					</a>
 				</div>
 				<div class="card-body">
-					<a href="switch-account-type/?type=Current">
+					<a href="switch-account-type?type=Current">
 						<button class="clickable-button btn-action" onclick="doFunction('CurrentAccountDisplay')">Current Account</button>
 					</a>
 				</div>
@@ -55,15 +55,14 @@
 			Balance: <%=account.getBalance()%></h2>
 		<hr>
 		<div class="main-account-content">
-			<iframe src="CurrentAccountDisplay" width="1056" height="300"
-				id="account-content"></iframe>
+<%--			<iframe src="CurrentAccountDisplay" width="1056" height="300"--%>
+<%--				id="account-content"></iframe>--%>
 		</div>
 		<div class="container-new main-content">
-			<a class="btn-action" onclick="openNav('deposit')">Deposit</a> <a
-				class="btn-action" onclick="openNav('withdraw')">WithDraw</a> <a
-				class="btn-action" onclick="openNav('save')">Save</a> <a
-				class="btn-action" onclick="openNav('transfer')">Transfer</a>
-		</div>
+			<a class="btn-action" onclick="openNav('Deposit')">Deposit</a> <a
+				class="btn-action" onclick="openNav('Withdraw')">WithDraw</a> <a
+				class="btn-action" onclick="openNav('Save')">Save</a> <a
+				class="btn-action" onclick="openNav('Transfer')">Transfer</a>
 		</div>
 	</main>
 
@@ -151,7 +150,7 @@
 			document.getElementById("submit-button-name").innerHTML = value
 					.toUpperCase();
 
-			if (value == 'transfer') {
+			if (value == 'Transfer') {
 				document.getElementById("to-customer-id-label").style.display = "block";
 				document.getElementById("to-customer-id").style.display = "block";
 				document.getElementById("submit-button-name").value = value;
@@ -159,7 +158,7 @@
 				document.getElementById("to-customer-id-label").style.display = "none";
 				document.getElementById("to-customer-id").style.display = "none";
 			}
-			if (value == 'save') {
+			if (value == 'Save') {
 				document.getElementById("duration").style.display = "block";
 			} else {
 				document.getElementById("duration").style.display = "none";

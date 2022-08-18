@@ -1,7 +1,5 @@
 package models;
 
-import data.dao.UserDao;
-
 public class User {
     private String id;
     private String username;

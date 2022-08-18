@@ -24,6 +24,7 @@ public class NewUserDao implements DaoInterface<String> {
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            System.out.println(query);
         }
 
         return list;
@@ -36,6 +37,7 @@ public class NewUserDao implements DaoInterface<String> {
             databaseManagement.doExecuteUpdate(query);
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            System.out.println(query);
         }
     }
 
@@ -46,6 +48,7 @@ public class NewUserDao implements DaoInterface<String> {
             databaseManagement.doExecuteUpdate(query);
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            System.out.println(query);
         }
     }
 
