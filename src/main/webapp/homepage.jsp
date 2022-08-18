@@ -144,7 +144,7 @@
                     <div class="row">
                         <div class="col-6" style="margin-top: 30px;">
                             <label for="to-customer-id" id="to-customer-id-label"
-                                   style="display: none; text-align: right;">SEND TO CUSTOMER ID</label>
+                                   style="display: none; text-align: right;">SEND TO ACCOUNT ID</label>
                         </div>
                         <div class="col-6" style="margin-top: 30px;">
                             <input class="info" type="text" name="to-customer-id"
