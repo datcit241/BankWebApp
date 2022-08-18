@@ -35,7 +35,7 @@
                     <p>Something wrong just happen because</p>
                     <p>
                         The error is
-                        <%= exception%>
+                        <%=exception%>
                         <%
                             out.print(request.getContextPath());
                         %>

@@ -26,12 +26,10 @@ public class ChangePassword extends HttpServlet {
 		User user = userService.getUserWithUsername(id);
 		user.setPassword(password);
 		new UserDao().update(user);
-		boolean flag = userService.isNewUser(user);
 
-		if (flag) {
+		if (userService.isNewUser(user)) {
+			request.getSession().setAttribute("account-type", AccountType.Current);
 			request.getRequestDispatcher("register.jsp").forward(request, response);
-			HttpSession session = request.getSession();
-			session.setAttribute("account-type", AccountType.Current.toString());
 		} else {
 			PrintWriter out = response.getWriter();
 			out.print("<h5 style='color: white; margin-left: 36%' Update Password Successfully</h5>");  

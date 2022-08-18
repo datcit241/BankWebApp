@@ -224,6 +224,13 @@ body {
 	transform: scale(1.5);
 }
 
+.main-account-content {
+	max-width: 70%;
+	align-items: center;
+	text-align: center !important;
+	margin: auto;
+}
+
 #changepass {
 	margin-top: 20px;
 }

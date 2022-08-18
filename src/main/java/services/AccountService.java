@@ -43,11 +43,6 @@ public class AccountService {
         String id = UUID.randomUUID().toString();
         Account account = new Account(id, user.getId(), 0d, accountType);
 
-        if (accountType == AccountType.Saving) {
-            SavingAccountDetails savingAccountDetails = new SavingAccountDetails(id, LocalDate.now(), "-1");
-            new SavingAccountDao().insert(savingAccountDetails);
-        }
-
         new AccountDao().insert(account);
         return true;
     }
@@ -55,14 +50,6 @@ public class AccountService {
     public SavingAccountDetails getSavingAccountDetails(Account account) {
         SavingAccountDetails savingAccountDetails = dataStorage.getSavingAccountDetailsRepository().find(savingAccount -> savingAccount.getAccountId().equals(account.getId()));
         return savingAccountDetails;
-    }
-
-    public double getInterest(Account account) {
-        changePlan(account);
-        SavingAccountDetails savingAccountDetails = getSavingAccountDetails(account);
-        double interest = interestCalculator.calc(account.getBalance(), savingAccountDetails.getSavedFrom());
-
-        return interest;
     }
 
     public void changePlan(Account account) {
@@ -79,7 +66,11 @@ public class AccountService {
             return account.getBalance();
         }
 
-        return account.getBalance() + getInterest(account);
+        changePlan(account);
+        SavingAccountDetails savingAccountDetails = getSavingAccountDetails(account);
+        double finalBalance = interestCalculator.calc(account.getBalance(), savingAccountDetails.getSavedFrom());
+
+        return finalBalance;
     }
 
     public void updateAccount(Account account) {
@@ -98,7 +89,7 @@ public class AccountService {
 
     public List<Transaction> getLatestTransactions(Account account, int n) {
         List<Transaction> transactions = getTransactions(account);
-        transactions.subList(0, n);
+        transactions = transactions.subList(0, Math.min(n, transactions.size()));
 
         return transactions;
     }
@@ -115,6 +106,7 @@ public class AccountService {
 
             if (savingAccountDetails == null) {
                 savingAccountDetails = new SavingAccountDetails(account.getId(), LocalDate.now(), null);
+                new SavingAccountDao().insert(savingAccountDetails);
             }
         }
 
@@ -136,11 +128,11 @@ public class AccountService {
         if (account.getType() == AccountType.Saving) {
             SavingAccountDetails savingAccountDetails = getSavingAccountDetails(account);
             savingAccountDetails.setSavedFrom(LocalDate.now());
+            new SavingAccountDao().update(savingAccountDetails);
         }
     }
 
     public boolean withDraw(Account account, double amount) {
-        SavingAccountDetails savingAccountDetails = getSavingAccountDetails(account);
         double totalBalance = getBalance(account);
 
         amount += imposeChargeWhenNecessary(account);

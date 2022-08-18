@@ -24,7 +24,7 @@ public class SavingAccountDao implements DaoInterface<SavingAccountDetails> {
             while (rs.next()) {
                 String accountId = rs.getString("account_id");
                 LocalDate savedFrom = new Date(rs.getDate("saved_from").getTime()).toLocalDate();
-                String savingPlanId = rs.getString("plan_id");
+                String savingPlanId = rs.getString("saving_plan_id");
 
                 SavingAccountDetails savingAccountDetails = new SavingAccountDetails(accountId, savedFrom, savingPlanId);
                 list.add(savingAccountDetails);
@@ -56,10 +56,10 @@ public class SavingAccountDao implements DaoInterface<SavingAccountDetails> {
 
     @Override
     public void update(SavingAccountDetails savingAccountDetails) {
-        String query = "update accounts set " +
+        String query = "update saving_accounts set " +
                 "saved_from = '" + savingAccountDetails.getSavedFrom() + "'," +
                 "saving_plan_id = '" + savingAccountDetails.getSavingPlanId() + "' " +
-                "where account_id = " + savingAccountDetails.getAccountId();
+                "where account_id = '" + savingAccountDetails.getAccountId() + "'";
         System.out.println(query);
         try {
             databaseManagement.doExecuteUpdate(query);

@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1" errorPage="error.jsp"%>
+<%--<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" errorPage="error.jsp"%>--%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +18,7 @@
 
 					<form action="RegisterServlet" method="post" class="login">
 
-						<h1 id="title">Registation</h1>
+						<h1 id="title">Registration</h1>
 						<div class="login__field">
 							<i class="login__icon fas fa-user"></i> <input type="text"
 								class="login__input" id="customer-name" name="customer-name"

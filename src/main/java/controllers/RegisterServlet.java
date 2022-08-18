@@ -17,14 +17,13 @@ public class RegisterServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		String id = (String) session.getAttribute("id");
 
 		String name = request.getParameter("customer-name");
 		String address = request.getParameter("customer-address");
 		String phone = request.getParameter("customer-phone");
 
+		String id = (String) session.getAttribute("id");
 		User user = userService.getUserWithUsername(id);
-		request.getSession().setAttribute("account-type", AccountType.Current.toString());
 
 		user.setName(name);
 		user.setAddress(address);
@@ -32,7 +31,10 @@ public class RegisterServlet extends HttpServlet {
 		new UserDao().update(user);
 		userService.activate(user);
 
+		request.getSession().setAttribute("account-type", AccountType.Current.toString());
+
 		session.setAttribute("user", user);
+
 		request.getRequestDispatcher("homepage.jsp").forward(request, response);
 	}
 
