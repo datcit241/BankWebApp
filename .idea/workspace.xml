@@ -10,26 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da625eaa-792c-4788-a4bf-b7e76025fb68" name="Changes" comment="Finish">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/AccountTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/AccountTypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ChangePassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ChangePassword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CurrentAccountTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CurrentAccountTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/dao/AccountDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/dao/AccountDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/dao/NewUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/dao/NewUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/dao/SavingAccountDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/dao/SavingAccountDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/dao/TransactionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/dao/TransactionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/database_management/JDBCConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/database_management/JDBCConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/homepage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/status.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/status.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +149,7 @@
       <option name="presentableId" value="Default" />
       <updated>1660716703441</updated>
       <workItem from="1660716704484" duration="22143000" />
-      <workItem from="1660792134942" duration="19612000" />
+      <workItem from="1660792134942" duration="19919000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1660754459921</created>
@@ -184,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660802604777</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Finish">
+      <created>1660814491319</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660814491319</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

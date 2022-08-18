@@ -61,7 +61,6 @@
 		<div class="container-new main-content">
 			<a class="btn-action" onclick="openNav('Deposit')">Deposit</a> <a
 				class="btn-action" onclick="openNav('Withdraw')">WithDraw</a> <a
-				class="btn-action" onclick="openNav('Save')">Save</a> <a
 				class="btn-action" onclick="openNav('Transfer')">Transfer</a>
 		</div>
 	</main>
@@ -158,11 +157,8 @@
 				document.getElementById("to-customer-id-label").style.display = "none";
 				document.getElementById("to-customer-id").style.display = "none";
 			}
-			if (value == 'Save') {
-				document.getElementById("duration").style.display = "block";
-			} else {
-				document.getElementById("duration").style.display = "none";
-			}
+
+			document.getElementById("duration").style.display = "none";
 		}
 	</script>
 </body>
