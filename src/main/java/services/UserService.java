@@ -28,7 +28,6 @@ public class UserService {
         createUser(username, password);
 
         User user = getUserWithUsername(username);
-        new AccountService().createAccounts(user);
 
         return username;
     }
@@ -52,11 +51,9 @@ public class UserService {
         return id != null;
     }
 
-    public void activate(User user, String password, String address, String phoneNumber) {
-        user.setPassword(password);
-        user.setAddress(address);
-        user.setPhoneNumber(phoneNumber);
+    public void activate(User user) {
         new NewUserDao().delete(user.getId());
+        new AccountService().createAccounts(user);
     }
 
     public boolean login(String username, String password) {

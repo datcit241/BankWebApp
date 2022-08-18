@@ -3,38 +3,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Login Page</title>
+<title>Registration</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
-	<main style="display: grid">
+	<main  style="display: grid">
 		<div class="container">
 
 			<div class="screen">
 
 				<div class="screen__content">
 
-					<form action="LoginServlet" method="post" class="login">
-						<h1 id="title">Log in</h1>
+					<form action="RegisterServlet" method="post" class="login">
+
+						<h1 id="title">Registation</h1>
 						<div class="login__field">
 							<i class="login__icon fas fa-user"></i> <input type="text"
-								class="login__input" name="id" placeholder="User name" id="id"
-								value="">
+								class="login__input" id="customer-name" name="customer-name"
+								placeholder="Full Name" aria-describedby="customer-name ">
 						</div>
 						<div class="login__field">
-							<i class="login__icon fas fa-lock"></i> <input type="password"
-								class="login__input" name="password" placeholder="Password"
-								id="password" value="">
+							<i class="login__icon fas fa-lock"></i> <input type="text"
+								class="login__input" id="customer-address"
+								name="customer-address" aria-describedby="customer-address"
+								placeholder="Address">
 						</div>
-						<button class="button login__submit">
-							<span class="button__text" id="submit-button">Log In Now</span> <i
-								class="button__icon fas fa-chevron-right"></i>
-						</button>
 
-						<p id="changepass">
-							<a href="change_password.jsp">Change password</a>
-						</p>
+						<div class="login__field">
+							<i class="login__icon fas fa-lock"></i> <input type="text"
+								class="login__input" id="customer-phone" name="customer-phone"
+								aria-describedby="customer-phone" placeholder="Phone number">
+						</div>
+						<button class="button login__submit ">
+							<span class="button__text" id="submit-button">Submit</span>
+						</button>
 
 					</form>
 				</div>
@@ -46,6 +50,8 @@
 				</div>
 			</div>
 		</div>
+
+
 	</main>
 </body>
 

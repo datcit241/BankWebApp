@@ -1,13 +1,10 @@
 package services;
 
-import data.DataStorage;
-import data.dao.AccountDao;
-import data.dao.TransactionDao;
-import enums.AccountType;
-import enums.TransactionType;
+import data.*;
+import data.dao.*;
+import enums.*;
 import models.*;
-import utilities.CompoundInterestCalculator;
-import utilities.InterestCalculator;
+import utilities.*;
 
 import java.time.LocalDate;
 import java.util.*;
@@ -18,10 +15,12 @@ public class AccountService {
     private static InterestCalculator interestCalculator;
 
     private DataStorage dataStorage;
+    private AccountDao accountDao;
 
     public AccountService() {
         dataStorage = DataStorage.getDataStorage();
         interestCalculator = new CompoundInterestCalculator(SavingPlan.getDefaultSavingPlan());
+        accountDao = new AccountDao();
     }
 
     public Account getUserAccount(User user, AccountType accountType) {
@@ -77,6 +76,10 @@ public class AccountService {
         return account.getBalance() + getInterest(account);
     }
 
+    public void updateAccount(Account account) {
+        accountDao.update(account);
+    }
+
     public void createTransaction(Account account, String toAccountId, TransactionType type, double prev, double current) {
         Transaction transaction = new Transaction(UUID.randomUUID().toString(), account.getId(), toAccountId, type, LocalDate.now(), prev, current);
         new TransactionDao().insert(transaction);
@@ -99,6 +102,7 @@ public class AccountService {
 
         createTransaction(account, null, TransactionType.Deposit, account.getBalance(), finalAmount);
         account.setBalance(finalAmount);
+        updateAccount(account);
 
         if (account.getType() == AccountType.Saving) {
             SavingAccountDetails savingAccountDetails = dataStorage.getSavingAccountDetailsRepository().find(anySavingAccount -> anySavingAccount.getAccountId().equals(account.getId()));
@@ -111,7 +115,7 @@ public class AccountService {
         return true;
     }
 
-    public double imposeChargeIfNeeded(Account account) {
+    public double imposeChargeWhenNecessary(Account account) {
         double charge = 0d;
         if (account.getType() == AccountType.Current) {
             if (account.getBalance() < MIN_BALANCE) {
@@ -122,11 +126,18 @@ public class AccountService {
         return charge;
     }
 
+    public void renewSavingDateWhenNecessary(Account account) {
+        if (account.getType() == AccountType.Saving) {
+            SavingAccountDetails savingAccountDetails = getSavingAccountDetails(account);
+            savingAccountDetails.setSavedFrom(LocalDate.now());
+        }
+    }
+
     public boolean withDraw(Account account, double amount) {
         SavingAccountDetails savingAccountDetails = getSavingAccountDetails(account);
         double totalBalance = getBalance(account);
 
-        amount += imposeChargeIfNeeded(account);
+        amount += imposeChargeWhenNecessary(account);
 
         if (totalBalance < amount) {
             return false;
@@ -135,7 +146,11 @@ public class AccountService {
         double finalBalance = totalBalance - amount;
 
         createTransaction(account, null, TransactionType.Withdraw, totalBalance, finalBalance);
+
         account.setBalance(finalBalance);
+        renewSavingDateWhenNecessary(account);
+
+        updateAccount(account);
 
         return true;
     }
@@ -144,7 +159,7 @@ public class AccountService {
         double totalBalance = getBalance(fromAccount);
         double totalAmount = amount;
 
-        totalAmount += imposeChargeIfNeeded(fromAccount);
+        totalAmount += imposeChargeWhenNecessary(fromAccount);
 
         if (totalBalance < totalAmount) {
             return false;
@@ -153,6 +168,9 @@ public class AccountService {
         createTransaction(fromAccount, toAccount.getId(), TransactionType.Transfer, totalBalance, totalBalance - totalAmount);
         fromAccount.setBalance(totalBalance - totalAmount);
         toAccount.updateBalance(amount);
+
+        renewSavingDateWhenNecessary(fromAccount);
+        updateAccount(fromAccount);
 
         return true;
     }

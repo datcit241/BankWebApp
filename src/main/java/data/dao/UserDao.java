@@ -19,10 +19,11 @@ public class UserDao implements DaoInterface<User> {
                 String userId = rs.getString("id");
                 String username = rs.getString("username");
                 String password = rs.getString("password");
+                String name = rs.getString("name");
                 String address = rs.getString("address");
                 String phoneNumber = rs.getString("phone_number");
 
-                User user = new User(userId, username, password, address, phoneNumber);
+                User user = new User(userId, username, password, name, address, phoneNumber);
                 list.add(user);
             }
         } catch (Exception e) {
@@ -51,6 +52,7 @@ public class UserDao implements DaoInterface<User> {
     public void update(User user) {
         String query = "update users set" +
                 "password = '" + user.getPassword() + "'," +
+                "name = '" + user.getName() + "'," +
                 "address = '" + user.getAddress() + "'," +
                 "phone_number = '" + user.getPhoneNumber() + "'," +
                 "where id = '" + user.getId() + "'";
