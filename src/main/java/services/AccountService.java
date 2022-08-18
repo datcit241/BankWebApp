@@ -108,8 +108,10 @@ public class AccountService {
             if (savingAccountDetails == null) {
                 savingAccountDetails = new SavingAccountDetails(account.getId(), LocalDate.now(), null);
                 new SavingAccountDao().insert(savingAccountDetails);
+            } else {
                 renewSavingDateWhenNecessary(account);
             }
+
         }
 
         return true;
