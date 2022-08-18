@@ -30,11 +30,6 @@ public class CurrentAccountTask extends HttpServlet {
 		AccountType accountType  = AccountType.valueOf((String) request.getSession().getAttribute("account-type"));
 		Account account = new AccountService().getUserAccount(user, accountType);
 
-		System.out.println(transactionType);
-		System.out.println(amount);
-		System.out.println(accountType);
-		System.out.println(account);
-
 		boolean check = false;
 		double getMoney = 0;
 
