@@ -9,8 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da625eaa-792c-4788-a4bf-b7e76025fb68" name="Changes" comment="Fix a bug in Transaction.java">
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CurrentAccountTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CurrentAccountTask.java" afterDir="false" />
+    <list default="true" id="da625eaa-792c-4788-a4bf-b7e76025fb68" name="Changes" comment="Remove System.out.println() for testing">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ChangePassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ChangePassword.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,20 +58,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Project.color": "0fffeb",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/datvo/IdeaProjects/CSE456/BankWebApp/src/main/resources"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Project.color&quot;: &quot;0fffeb&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/datvo/IdeaProjects/CSE456/BankWebApp/src/main/resources&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -149,7 +150,8 @@
       <option name="presentableId" value="Default" />
       <updated>1660716703441</updated>
       <workItem from="1660716704484" duration="22143000" />
-      <workItem from="1660792134942" duration="20697000" />
+      <workItem from="1660792134942" duration="21123000" />
+      <workItem from="1660819661301" duration="101000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1660754459921</created>
@@ -186,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660815270552</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Remove System.out.println() for testing">
+      <created>1660815566738</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1660815566738</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +217,8 @@
     <MESSAGE value="Finish" />
     <MESSAGE value="Add data.sql" />
     <MESSAGE value="Fix a bug in Transaction.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix a bug in Transaction.java" />
+    <MESSAGE value="Remove System.out.println() for testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove System.out.println() for testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
