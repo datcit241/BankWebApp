@@ -3,6 +3,7 @@
 <%@ page import="models.*" %>
 <%@ page import="enums.*" %>
 <%@ page import="services.*" %>
+<%@ page import="java.text.NumberFormat" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
@@ -11,6 +12,9 @@
     AccountType type = AccountType.valueOf((String) request.getSession().getAttribute("account-type"));
     Account account = new AccountService().getUserAccount(user, type);
     AccountService accountService = new AccountService();
+
+    NumberFormat formatter = NumberFormat.getInstance();
+    formatter.setGroupingUsed(true);
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,7 +73,7 @@
         </div>
     </div>
     <h2 id="balance" style="text-align: center; font-weight: bold;">
-        Balance: <%=String.format("%2f", new AccountService().getBalance(account))%>
+        Balance: <%=formatter.format(new AccountService().getBalance(account))%>
     </h2>
     <hr>
     <div class="main-account-content">
@@ -82,9 +86,10 @@
                 <th scope="col">ID</th>
                 <th scope="col">To Account ID</th>
                 <th scope="col">Type of transaction</th>
-                <th scope="col">Date</th>
-                <th scope="col">Prev-Amount</th>
-                <th scope="col">Final-Amount</th>
+                <th scope="col">At</th>
+                <th scope="col">Difference</th>
+                <th scope="col">Previous balance</th>
+                <th scope="col">Balance</th>
             </tr>
             </thead>
             <tbody>
@@ -94,11 +99,12 @@
                     out.println("<tr>");
                     out.println("<th scope='row'>" + i++ + "</th>");
                     out.println("<td>" + transaction.getId() + "</td>");
-                    out.println("<td>" + transaction.getToAccountId() + "</td>");
+                    out.println("<td>" + (transaction.getToAccountId() == null ? "no" : transaction.getToAccountId()) + "</td>");
                     out.println("<td>" + transaction.getType() + "</td>");
                     out.println("<td>" + transaction.getConductedAt() + "</td>");
-                    out.println("<td>" + String.format("%3f", transaction.getPrevAmount()) + "</td>");
-                    out.println("<td>" + String.format("%3f", transaction.getFinalAmount()) + "</td>");
+                    out.println("<td>" + formatter.format(transaction.getFinalAmount() - transaction.getPrevAmount()) + "</td>");
+                    out.println("<td>" + formatter.format(transaction.getPrevAmount()) + "</td>");
+                    out.println("<td>" + formatter.format(transaction.getFinalAmount()) + "</td>");
                     out.println("</tr>");
                 }
             %>

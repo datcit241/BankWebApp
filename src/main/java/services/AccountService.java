@@ -7,6 +7,7 @@ import models.*;
 import utilities.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.*;
 
 public class AccountService {
@@ -78,7 +79,7 @@ public class AccountService {
     }
 
     public void createTransaction(Account account, String toAccountId, TransactionType type, double prev, double current) {
-        Transaction transaction = new Transaction(UUID.randomUUID().toString(), account.getId(), toAccountId, type, LocalDate.now(), prev, current);
+        Transaction transaction = new Transaction(UUID.randomUUID().toString(), account.getId(), toAccountId, type, LocalDateTime.now(), prev, current);
         new TransactionDao().insert(transaction);
     }
 
@@ -95,7 +96,7 @@ public class AccountService {
     }
 
     public boolean deposit(Account account, double amount) {
-        double finalAmount = account.getBalance() + amount;
+        double finalAmount = getBalance(account) + amount;
 
         createTransaction(account, null, TransactionType.Deposit, account.getBalance(), finalAmount);
         account.setBalance(finalAmount);
@@ -107,6 +108,7 @@ public class AccountService {
             if (savingAccountDetails == null) {
                 savingAccountDetails = new SavingAccountDetails(account.getId(), LocalDate.now(), null);
                 new SavingAccountDao().insert(savingAccountDetails);
+                renewSavingDateWhenNecessary(account);
             }
         }
 

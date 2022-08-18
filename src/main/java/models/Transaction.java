@@ -2,7 +2,8 @@ package models;
 
 import enums.TransactionType;
 
-import java.time.LocalDate;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.Comparator;
 
 public class Transaction {
@@ -16,11 +17,11 @@ public class Transaction {
     private String accountId;
     private String toAccountId;
     private TransactionType type;
-    private LocalDate conductedAt;
+    private LocalDateTime conductedAt;
     private double prevAmount;
     private double finalAmount;
 
-    public Transaction(String id, String accountId, String toAccountId, TransactionType type, LocalDate conductedAt, double prevAmount, double finalAmount) {
+    public Transaction(String id, String accountId, String toAccountId, TransactionType type, LocalDateTime conductedAt, double prevAmount, double finalAmount) {
         this.id = id;
         this.accountId = accountId;
         this.toAccountId = toAccountId;
@@ -38,7 +39,7 @@ public class Transaction {
 
     public TransactionType getType() { return type; }
 
-    public LocalDate getConductedAt() { return conductedAt; }
+    public LocalDateTime getConductedAt() { return conductedAt; }
 
     public double getPrevAmount() { return prevAmount; }
 
@@ -60,7 +61,7 @@ public class Transaction {
                 "'" + this.accountId + "'," +
                 "'" + this.toAccountId + "'," +
                 "'" + this.type.toString() + "'," +
-                "'" + this.conductedAt + "'," +
+                "'" + Timestamp.valueOf(conductedAt) + "'," +
                 this.prevAmount + "," +
                 this.finalAmount;
     }

@@ -4,9 +4,8 @@ import data.database_management.DatabaseManagement;
 import enums.TransactionType;
 import models.Transaction;
 
-import java.sql.Date;
 import java.sql.ResultSet;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,11 +27,11 @@ public class TransactionDao implements DaoInterface<Transaction> {
                 String accountId = rs.getString("account_id");
                 String toAccountId = rs.getString("to_account_id");
                 TransactionType type = TransactionType.valueOf(rs.getString("type"));
-                LocalDate savedFrom = new Date(rs.getDate("saved_from").getTime()).toLocalDate();
+                LocalDateTime conductedAt = rs.getTimestamp("time_stamp").toLocalDateTime();
                 double prevAmount = rs.getDouble("prev_amount");
                 double finalAmount = rs.getDouble("final_amount");
 
-                Transaction transaction = new Transaction(id, accountId, toAccountId, type, savedFrom, prevAmount, finalAmount);
+                Transaction transaction = new Transaction(id, accountId, toAccountId, type, conductedAt, prevAmount, finalAmount);
                 list.add(transaction);
             }
         } catch (Exception e) {
