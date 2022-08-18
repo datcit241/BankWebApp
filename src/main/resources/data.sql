@@ -36,7 +36,7 @@ CREATE TABLE `accounts` (
 
 LOCK TABLES `accounts` WRITE;
 /*!40000 ALTER TABLE `accounts` DISABLE KEYS */;
-INSERT INTO `accounts` VALUES ('fd018f98-ed03-45a4-b27e-9ebd593318dc','1',40000,'Current'),('713459da-29f5-4938-a3fa-b598c86f4a0f','1',0,'Saving');
+INSERT INTO `accounts` VALUES ('fd018f98-ed03-45a4-b27e-9ebd593318dc','1',100029000,'Current'),('713459da-29f5-4938-a3fa-b598c86f4a0f','1',0,'Saving');
 /*!40000 ALTER TABLE `accounts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -98,7 +98,7 @@ CREATE TABLE `transactions` (
   `account_id` varchar(90) DEFAULT NULL,
   `to_account_id` varchar(90) DEFAULT NULL,
   `type` varchar(90) DEFAULT NULL,
-  `saved_from` date DEFAULT NULL,
+  `time_stamp` timestamp NULL DEFAULT NULL,
   `prev_amount` double DEFAULT NULL,
   `final_amount` double DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -110,7 +110,7 @@ CREATE TABLE `transactions` (
 
 LOCK TABLES `transactions` WRITE;
 /*!40000 ALTER TABLE `transactions` DISABLE KEYS */;
-INSERT INTO `transactions` VALUES ('a0bb2aca-be8c-4a68-8627-1d735b6c76c6','null','fd018f98-ed03-45a4-b27e-9ebd593318dc','Deposit','2022-08-18',30000,40000);
+INSERT INTO `transactions` VALUES ('457755dd-bef7-4746-a806-5d7f45d8000c','fd018f98-ed03-45a4-b27e-9ebd593318dc','null','Deposit','2022-08-18 14:31:17',10000,20000),('85a0317d-691a-4bb1-8811-4e423b6613bf','fd018f98-ed03-45a4-b27e-9ebd593318dc','null','Deposit','2022-08-18 14:36:02',20000,100020000),('02cc44cb-9f81-44af-afd7-8877a0eb44f0','fd018f98-ed03-45a4-b27e-9ebd593318dc','null','Deposit','2022-08-18 14:42:09',100020000,100030000),('5529be33-164b-4aac-99bc-2c7a70f6f331','fd018f98-ed03-45a4-b27e-9ebd593318dc','null','Deposit','2022-08-18 14:42:33',100030000,100041000),('d82e9e6c-fdbf-4a89-aff0-07e0158f36d0','fd018f98-ed03-45a4-b27e-9ebd593318dc','null','Withdraw','2022-08-18 14:46:13',100041000,100029000);
 /*!40000 ALTER TABLE `transactions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -150,4 +150,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-08-18 16:22:16
+-- Dump completed on 2022-08-18 21:49:50
