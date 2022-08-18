@@ -167,13 +167,18 @@ public class AccountService {
             return false;
         }
 
-        createTransaction(fromAccount, toAccount.getId(), TransactionType.Transfer, totalBalance, totalBalance - totalAmount);
         fromAccount.setBalance(totalBalance - totalAmount);
-        toAccount.updateBalance(amount);
-
         renewSavingDateWhenNecessary(fromAccount);
         updateAccount(fromAccount);
+
+        toAccount = this.getAccountById(toAccount.getId());
+
+        toAccount.updateBalance(amount);
         updateAccount(toAccount);
+
+        fromAccount = getAccountById(fromAccount.getId());
+
+        createTransaction(fromAccount, toAccount.getId(), TransactionType.Transfer, totalBalance, fromAccount.getBalance());
 
         return true;
     }
