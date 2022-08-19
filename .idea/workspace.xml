@@ -9,10 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da625eaa-792c-4788-a4bf-b7e76025fb68" name="Changes" comment="Enable error pages">
+    <list default="true" id="da625eaa-792c-4788-a4bf-b7e76025fb68" name="Changes" comment="Fix critical section problem">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/AccountService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/homepage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +184,8 @@
       <workItem from="1660716704484" duration="22143000" />
       <workItem from="1660792134942" duration="21123000" />
       <workItem from="1660819661301" duration="2219000" />
-      <workItem from="1660822177657" duration="14377000" />
+      <workItem from="1660822177657" duration="14418000" />
+      <workItem from="1660871369456" duration="3282000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1660754459921</created>
@@ -270,7 +271,21 @@
       <option name="project" value="LOCAL" />
       <updated>1660835870840</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fix critical section problem">
+      <created>1660838262027</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1660838262027</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fix critical section problem">
+      <created>1660838273199</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1660838273199</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +314,8 @@
     <MESSAGE value="Update database" />
     <MESSAGE value="Fix a bug in AccountService.java" />
     <MESSAGE value="Enable error pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enable error pages" />
+    <MESSAGE value="Fix critical section problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix critical section problem" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
