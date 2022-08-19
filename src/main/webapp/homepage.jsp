@@ -136,15 +136,14 @@
                 <div class="col-12">
                     <div class="row">
                         <div class="col-12" style="margin-top: 30px;">
-                            <label for="customer_name">CUSTOMER NAME</label> <input
+                            <label for="customer_name">You are </label> <input
                                 class="info" type="text" name="customer_name"
                                 id="customer_name" disabled value="<%=user.getName()%>">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-6" style="margin-top: 30px;">
-                            <label for="to-customer-id" id="to-customer-id-label"
-                                   style="display: none; text-align: right;">SEND TO ACCOUNT ID</label>
+                            <label style="display: none; text-align: left" for="to-customer-id" id="to-customer-id-label">Send to</label>
                         </div>
                         <div class="col-6" style="margin-top: 30px;">
                             <input class="info" type="text" name="to-customer-id"
@@ -153,10 +152,10 @@
                     </div>
                     <div class="row">
                         <div class="col-12" style="margin-top: 30px;">
-                            <label for="transaction">TRANSACTION</label> <input class="info"
+                            <label for="transaction">Type of transactions</label> <input class="info"
                                                                                 type="text" name="transaction"
                                                                                 id="transaction" value="">
-                            <br> <label for="amount" style="margin-top: 30px;">AMOUNT</label>
+                            <br> <label for="amount" style="margin-top: 30px;">Amount</label>
                             <input class="info" type="text" name="amount" id="amount"
                                    required>
                         </div>

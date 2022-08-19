@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da625eaa-792c-4788-a4bf-b7e76025fb68" name="Changes" comment="Fix critical section problem">
+    <list default="true" id="da625eaa-792c-4788-a4bf-b7e76025fb68" name="Changes" comment="Update css">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/homepage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/style.css" afterDir="false" />
@@ -185,7 +185,8 @@
       <workItem from="1660792134942" duration="21123000" />
       <workItem from="1660819661301" duration="2219000" />
       <workItem from="1660822177657" duration="14418000" />
-      <workItem from="1660871369456" duration="3282000" />
+      <workItem from="1660871369456" duration="3569000" />
+      <workItem from="1660875869215" duration="674000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1660754459921</created>
@@ -285,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660838273199</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Update css">
+      <created>1660874956147</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1660874956147</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +323,8 @@
     <MESSAGE value="Fix a bug in AccountService.java" />
     <MESSAGE value="Enable error pages" />
     <MESSAGE value="Fix critical section problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix critical section problem" />
+    <MESSAGE value="Update css" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update css" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

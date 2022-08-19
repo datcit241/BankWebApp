@@ -159,6 +159,11 @@ body {
 	margin: 5px;
 }
 
+#bank-action {
+	text-align: left !important;
+	margin-left: 759px;
+}
+
 .login__submit:active, .login__submit:focus, .login__submit:hover {
 	border-color: #6A679E;
 	outline: none;
